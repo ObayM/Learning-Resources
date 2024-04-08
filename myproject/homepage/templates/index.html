@@ -14,24 +14,36 @@
       href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <!-- Boxicon -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
     <!-- Favicon -->
     <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
-
+    <!-- CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <title>Learning Resources</title>
   </head>
   <body>
     <!-- Header -->
-    <header class="header" data-header>
-      <div class="container">
-        <a href="#" class="logo">
-          <img src="" width="162" height="50" alt="" />
-        </a>
-
-        <nav class="navbar" data-navbar>
-          <div class="wrapper">
-            <a href="" class="logo"></a>
-          </div>
-        </nav>
+    <header>
+      <!-- <img src="../static/images/test-logo.svg" alt="" class="logo"> -->
+      <a href="#" class="logo"><i class="ri-graduation-cap-fill"></i><span>Logo</span></a>
+      <ul class="navbar">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Learn</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+      
+      <div class="main">
+        <a href="#" class="user"><i class="ri-user-fill"></i>Sign In</a>
+        <a href="#">Sign Up</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
       </div>
     </header>
 
