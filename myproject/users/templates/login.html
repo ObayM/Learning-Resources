@@ -9,5 +9,15 @@
 </head>
 <body>
     <h1>Login Page</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" placeholder="Username">
+
+        <label for="password">Username</label>
+        <input id="password" name="password" type="password" placeholder="Password">
+
+        <button type="submit">Sign In</button>
+    </form>
 </body>
 </html>
