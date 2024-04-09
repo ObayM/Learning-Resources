@@ -1,4 +1,3 @@
-
 /* CUSTOM PROPERTYS */
 
 :root {
@@ -72,8 +71,7 @@
     */
 
     --radius-pill: 500px;
-    --radius-half: 50px
-    --radius-circle: 50%;
+    --radius-half: 50px --radius-circle: 50%;
     --radius-3: 3px;
     --radius-5: 5px;
     --radius-10: 10px;
@@ -268,4 +266,49 @@ header {
     cursor: pointer;
     z-index: 9999;
     display: none;
+}
+
+.navbar i.fa-solid.fa-chevron-down {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    margin-left: 8px;
+    transition: var(--transition-3);
+    pointer-events: none;
+}
+
+.navbar a:hover i.fa-solid.fa-chevron-down {
+    transform: rotate(-180deg);
+}
+
+.navbar li .dropdown-learn {
+    width: 200px;
+    position: absolute;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: hsl(0, 0%, 16%);
+    transform: translateY(0);
+    transition: 0.3s ease;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.navbar li:hover .dropdown-learn {
+    transform: translateY(8px);
+    visibility: visible;
+    opacity: 1;
+}
+
+.navbar li .dropdown-learn .dropdown-learn-item a {
+    display: block;
+    color: var(--isabelline);
+    font-weight: 500;
+    transition: 0.3s ease;
+    padding: 16px;
+}
+
+.navbar li .dropdown-learn .dropdown-learn-item:hover {
+    color: var(--main-color);
+    background-color: var(--kappel_15);
 }

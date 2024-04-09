@@ -21,10 +21,15 @@
     />
     <!-- Favicon -->
     <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
-    <!-- CDN -->
+    <!-- Remixixon CDN -->
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
       rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
     <title>Learning Resources</title>
   </head>
@@ -32,17 +37,27 @@
     <!-- Header -->
     <header>
       <!-- <img src="../static/images/test-logo.svg" alt="" class="logo"> -->
-      <a href="#" class="logo"><i class="ri-graduation-cap-fill"></i><span>Logo</span></a>
+      <a href="#" class="logo"
+        ><i class="ri-graduation-cap-fill"></i><span>Logo</span></a
+      >
       <ul class="navbar">
         <li><a href="#" class="active">Home</a></li>
-        <li><a href="#">Learn</a></li>
+        <li>
+          <a href="#">Learn <i class="fa-solid fa-chevron-down"></i></a>
+          <ul class="dropdown-learn">
+            <li class="dropdown-learn-item"><a href="#">Fields</a></li>
+            <li class="dropdown-learn-item"><a href="#">Courses</a></li>
+            <li class="dropdown-learn-item"><a href="#">Articles</a></li>
+            <li class="dropdown-learn-item"><a href="#">Quizzes</a></li>
+          </ul>
+        </li>
         <li><a href="#">Courses</a></li>
         <li><a href="#">About Us</a></li>
       </ul>
-      
+
       <div class="main">
-        <a href="#" class="user"><i class="ri-user-fill"></i>Sign In</a>
-        <a href="#">Sign Up</a>
+        <a href="#" class="user"><i class="ri-user-fill"></i>Login</a>
+        <a href="/signup">Sign Up</a>
         <div class="bx bx-menu" id="menu-icon"></div>
       </div>
     </header>
