@@ -1,6 +1,6 @@
 from django.shortcuts import redirect, render
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate
+from django.contrib.auth import authenticate,logout
 from django.contrib.auth import login as auth_login
 from django.contrib import messages
 
@@ -10,7 +10,7 @@ def profile(request):
     context = {
         'user': user
     }
-    return render(request, "profile.html")
+    return render(request, "profile.html",context)
 
 def login(request):
     if request.method == "POST":
@@ -45,3 +45,6 @@ def signup(request):
         return redirect("login")
     return render(request, "signup.html")
 
+def signout(request):
+    logout(request)
+    return redirect("index")
