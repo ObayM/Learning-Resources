@@ -5,6 +5,13 @@ from django.contrib.auth import login as auth_login
 from django.contrib import messages
 
 # Create your views here.
+def profile(request):
+    user = request.user
+    context = {
+        'user': user
+    }
+    return render(request, "profile.html")
+
 def login(request):
     if request.method == "POST":
         username = request.POST.get("username")
@@ -14,11 +21,10 @@ def login(request):
 
         if user is not None:
             auth_login(request, user)
-            fname = user.first_name
-            messages.success(request, "Logged In Sucessfully!!")
+            return redirect('profile')
+
         else:
-            messages.error(request, "Bad Credentials!!")
-            return redirect('home')
+            return redirect('/')
 
     return render(request, "login.html")
 
@@ -35,10 +41,7 @@ def signup(request):
         my_user.last_name = lname
 
         my_user.save()
-        messages.success(request, "Your Account has been created succesfully!")
 
         return redirect("login")
     return render(request, "signup.html")
 
-def user(request):
-    return render(request, "user.html")
