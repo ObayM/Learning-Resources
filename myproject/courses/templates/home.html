@@ -6,6 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Welcome To courses</h1>
+    <h1>Welcome To </h1>
+
+    {% for course in latest_courses %}
+        <h3>{{course.title}}</h3>
+    {% endfor%}
+
+    {% for course in recommended_courses %}
+        <h3>{{course.title}} d</h3>
+    {% endfor%}
+
 </body>
 </html>
