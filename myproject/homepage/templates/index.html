@@ -64,6 +64,14 @@
           <a href="/signup">Sign Up</a>
         {% endif %}
         <div id="menu-icon" class="bx bx-menu"></div>
+        {% if user.is_authenticated %}
+        <a href="/profile" class="user"><i class="ri-user-fill"></i>Hi, {{user.first_name}}</a>
+        <button type="submit"><a href="/signout">Log Out</a></button>
+        {% else %}
+          <a href="/login" class="user"><i class="ri-user-fill"></i>Log In</a>
+          <a href="/signup">Sign Up</a>
+          <div class="bx bx-menu" id="menu-icon"></div>
+        {% endif %}
       </div>
     </header>
 
